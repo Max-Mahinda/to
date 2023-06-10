@@ -1,73 +1,154 @@
-.App {
-  text-align: center;
-  margin: 50px auto;
-  max-width: 400px;
-  padding: 20px;
-  background-color: #f4f4f4;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+/* App.css */
 
-h1 {
-  margin-top: 0;
-  color: #333;
-}
-
-input[type="text"] {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-button {
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #45a049;
-}
-
-ul {
-  list-style-type: none;
+body {
+  margin: 0;
   padding: 0;
 }
 
+.background {
+  background-image: linear-gradient(to bottom right, #667eea, #764ba2);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.App {
+  max-width: 500px;
+  width: 100%;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.Nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.Nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.Nav ul li {
+  margin-right: 10px;
+}
+
+.Nav ul li a {
+  text-decoration: none;
+  color: #333333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #eeeeee;
+}
+
+.Nav ul li a:hover {
+  background-color: #dddddd;
+}
+/* Nav.css */
+
+nav {
+  background-color: #333333;
+  padding: 10px 20px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
 li {
+  margin-right: 10px;
+}
+
+li:last-child {
+  margin-right: 0;
+}
+
+Link {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #555555;
+}
+
+Link:hover {
+  background-color: #777777;
+}
+/* TodoList.css */
+
+.TodoList {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.TodoList h2 {
+  text-align: center;
+}
+
+.TodoList p {
+  margin-bottom: 10px;
+}
+
+.TodoList label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.TodoList input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.TodoList button {
+  background-color: #555555;
+  color: #ffffff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.TodoList button:hover {
+  background-color: #777777;
+}
+
+.TodoList ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.TodoList li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: white;
-  padding: 10px;
-  margin-top: 10px;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: relative;
+  border-bottom: 1px solid #cccccc;
+  padding: 10px 0;
 }
 
-li button {
-  background-color: #f44336;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  padding: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
+.TodoList li:last-child {
+  border-bottom: none;
 }
 
-li button:hover {
-  background-color: #d32f2f;
+.TodoList li strong {
+  margin-right: 5px;
 }
 
 
