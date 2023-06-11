@@ -17,7 +17,7 @@
 
 body {
   font-family: 'Lato', sans-serif;
-  color: red;
+  color: yellow;
   line-height: 1.5;
   padding: 0;
   background: #f2f2f2;
@@ -43,7 +43,7 @@ header {
 header h1 {
   font-size: 2.5em;
   line-height: 1;
-  color: brown;
+  color: white;
   margin: 0 0 0.65em;
 }
 
@@ -64,7 +64,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: brown;
+  color: yellow;
   text-decoration: firebrick;
   font-size: 1.2em;
 }
@@ -152,7 +152,7 @@ button:focus {
   background-color: var(--color-hide);
 }
 body{
-  background-image: url('../pexels-photo-346529.webp');
+  background-image: url('../istockphoto-1355687180-612x612.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
