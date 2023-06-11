@@ -1,154 +1,156 @@
-/* App.css */
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 
-body {
-  margin: 0;
-  padding: 0;
+:root {
+  --color-main: #45529d;
+  --color-hide: blue;
+  --color-hide-dark: #7178a0;
+  --color-add: #34baec;
+  --color-add-dark: #2ca6d2;
+  --color-remove: #b8555e;
+  --color-remove-light: #cb636c;
+  --color-remove-dark: #9a3942;
 }
 
-.background {
-  background-image: linear-gradient(to bottom right, #667eea, #764ba2);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: white;
+  line-height: 1.5;
+  padding: 0;
+  background: #f2f2f2;
+  margin: 0;
+}
+
+.wrapper {
+  width: 95%;
+  margin: 0 auto;
+  box-shadow: 0 10px 22px -15px #2e397e;
+  background-color: blue;
+  padding: 1em;
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 
-.App {
-  max-width: 500px;
-  width: 100%;
-  padding: 20px;
-  background-color: #ffffff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+header {
+  text-align: center;
+  padding: 2.5em 1em;
+  background-color: var(--color-main);
 }
 
-.Nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
+header h1 {
+  font-size: 2.5em;
+  line-height: 1;
+  color: #fff;
+  margin: 0 0 0.65em;
 }
-
-.Nav ul {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-.Nav ul li {
-  margin-right: 10px;
-}
-
-.Nav ul li a {
-  text-decoration: none;
-  color: #333333;
-  padding: 5px 10px;
-  border-radius: 5px;
-  background-color: #eeeeee;
-}
-
-.Nav ul li a:hover {
-  background-color: #dddddd;
-}
-/* Nav.css */
 
 nav {
-  background-color: #333333;
-  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+nav ul {
+  list-style: square;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 1em;
+}
+
+nav ul li a {
+  color: brown;
+  text-decoration: firebrick;
+  font-size: 1.2em;
+}
+
+.group {
+  display: flex;
+  justify-content: center;
+}
+
+.list-container {
+  padding: 0.65em 2em 2em;
 }
 
 ul {
-  list-style: none;
-  margin: 0;
+  font-size: 1.15em;
   padding: 0;
-  display: flex;
+  margin: 0 0 1.15em;
+  list-style: none;
 }
 
 li {
-  margin-right: 10px;
+  padding: 1.15em 0.5em;
+  display: flex;
+  align-items: center;
+  border-bottom: solid 1px #dedede;
 }
 
 li:last-child {
-  margin-right: 0;
-}
-
-Link {
-  text-decoration: none;
-  color: #ffffff;
-  padding: 5px 10px;
-  border-radius: 5px;
-  background-color: #555555;
-}
-
-Link:hover {
-  background-color: #777777;
-}
-/* TodoList.css */
-
-.TodoList {
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #ffffff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.TodoList h2 {
-  text-align: center;
-}
-
-.TodoList p {
-  margin-bottom: 10px;
-}
-
-.TodoList label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.TodoList input[type="text"] {
-  width: 100%;
-  padding: 5px;
-  border: 1px solid #cccccc;
-  border-radius: 3px;
-  margin-bottom: 10px;
-}
-
-.TodoList button {
-  background-color: #555555;
-  color: #ffffff;
-  padding: 5px 10px;
   border: none;
-  border-radius: 3px;
+}
+
+/* Form Controls */
+input:focus,
+button:focus {
+  outline: none;
+}
+
+label {
+  position: relative;
+  display: block;
   cursor: pointer;
 }
 
-.TodoList button:hover {
-  background-color: #777777;
+label::before {
+  content: attr(data-label);
+  display: block;
+  font-size: 1.15em;
+  margin-bottom: 0.5em;
 }
 
-.TodoList ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+input {
+  font-size: 1.15em;
+  width: 70%;
+  padding: 0.5em 1em;
+  border: 1px solid #dcdcdc;
 }
 
-.TodoList li {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid #cccccc;
-  padding: 10px 0;
+input:focus {
+  border: solid 3px var(--color-add);
 }
 
-.TodoList li:last-child {
-  border-bottom: none;
+button {
+  color: white;
+  font-size: 1em;
+  padding: 1em;
+  background-color: var(--color-add);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
 }
 
-.TodoList li strong {
-  margin-right: 5px;
+button:hover {
+  background-color: var(--color-add-dark);
 }
 
+button:focus {
+  outline: solid 3px #fff;
+  outline-offset: -3px;
+}
 
+.btn-toggle {
+  background-color: var(--color-hide);
+}
+body{
+  background-image: url('../pexels-photo-346529.webp');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+}
